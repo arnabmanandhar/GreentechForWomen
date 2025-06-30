@@ -61,10 +61,8 @@
   <title>Greentech for Women</title>
 
   <meta property="og:type" content="website">
-  <meta property="title"
-    content="| Greentech For Women">
-  <meta property="og:title"
-    content=" | Greentech For Women">
+  <meta property="title" content="| Greentech For Women">
+  <meta property="og:title" content=" | Greentech For Women">
 
   <meta name="description" content="GreentechForWomen">
   <meta property="description" content="GreentechForWomen">
@@ -77,8 +75,15 @@
   <meta name="twitter:card" content="summary">
 
   <meta property="twitter:image" content="images/background-images/GFW_main.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Adorn+Serif&display=swap" rel="stylesheet">
 
   <link rel="canonical" href="index.html">
+  <!-- Anton (for bold sans serif) -->
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- OR Cormorant (for royal serif) -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
 
   <script type='application/ld+json'>
     {
@@ -377,7 +382,7 @@
             </li>
 
 
-<!-- 
+            <!-- 
             <li class="lg:flex lg:items-center lg:justify-center">
               <a href="ndis.html"
                 class="uppercase transition-all duration-300 ease-in-out text-primary-light lg:text-primary">
@@ -395,15 +400,15 @@
                 </a>
 
 
-        <div class="flex gap-4 items-center lg:ml-6">
-          <a href="login.html" class="lg:hidden">
-            <img src="images/account-icon.svg" alt="My account" class="block w-6 h-6">
-          </a>
-          <div
-            wire:snapshot="{&quot;data&quot;:{&quot;cartOpen&quot;:null,&quot;clearCart&quot;:null,&quot;user&quot;:null,&quot;ndisPartialDiscount&quot;:0,&quot;ndisFullDiscount&quot;:0,&quot;openCartModal&quot;:null,&quot;updateQuantity&quot;:null,&quot;cartData&quot;:[[],{&quot;s&quot;:&quot;arr&quot;}],&quot;giftCards&quot;:[[],{&quot;s&quot;:&quot;arr&quot;}],&quot;total&quot;:0,&quot;subTotal&quot;:0,&quot;foodPreparation&quot;:null,&quot;voucherCode&quot;:null,&quot;voucherError&quot;:null,&quot;cartCount&quot;:0,&quot;minimumOrder&quot;:7900,&quot;displayMinCheckout&quot;:7900,&quot;page&quot;:&quot;home&quot;},&quot;memo&quot;:{&quot;id&quot;:&quot;89jgNq84VNY6DBAO4KBQ&quot;,&quot;name&quot;:&quot;cart-dropdown&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;71d1f15c472648f915a2a055b278e308869bd13f84791dd9554dab09ef7bfd7a&quot;}"
-            wire:effects="{&quot;listeners&quot;:[&quot;cartUpdated&quot;],&quot;dispatches&quot;:[{&quot;name&quot;:&quot;updateCartCountStore&quot;,&quot;params&quot;:[0]}]}"
-            wire:id="89jgNq84VNY6DBAO4KBQ"
-            x-data="{ clearCart: window.Livewire.find('89jgNq84VNY6DBAO4KBQ').entangle('clearCart').live }">
+                <div class="flex gap-4 items-center lg:ml-6">
+                  <a href="login.html" class="lg:hidden">
+                    <img src="images/account-icon.svg" alt="My account" class="block w-6 h-6">
+                  </a>
+                  <div
+                    wire:snapshot="{&quot;data&quot;:{&quot;cartOpen&quot;:null,&quot;clearCart&quot;:null,&quot;user&quot;:null,&quot;ndisPartialDiscount&quot;:0,&quot;ndisFullDiscount&quot;:0,&quot;openCartModal&quot;:null,&quot;updateQuantity&quot;:null,&quot;cartData&quot;:[[],{&quot;s&quot;:&quot;arr&quot;}],&quot;giftCards&quot;:[[],{&quot;s&quot;:&quot;arr&quot;}],&quot;total&quot;:0,&quot;subTotal&quot;:0,&quot;foodPreparation&quot;:null,&quot;voucherCode&quot;:null,&quot;voucherError&quot;:null,&quot;cartCount&quot;:0,&quot;minimumOrder&quot;:7900,&quot;displayMinCheckout&quot;:7900,&quot;page&quot;:&quot;home&quot;},&quot;memo&quot;:{&quot;id&quot;:&quot;89jgNq84VNY6DBAO4KBQ&quot;,&quot;name&quot;:&quot;cart-dropdown&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;71d1f15c472648f915a2a055b278e308869bd13f84791dd9554dab09ef7bfd7a&quot;}"
+                    wire:effects="{&quot;listeners&quot;:[&quot;cartUpdated&quot;],&quot;dispatches&quot;:[{&quot;name&quot;:&quot;updateCartCountStore&quot;,&quot;params&quot;:[0]}]}"
+                    wire:id="89jgNq84VNY6DBAO4KBQ"
+                    x-data="{ clearCart: window.Livewire.find('89jgNq84VNY6DBAO4KBQ').entangle('clearCart').live }">
             <li class="flex lg:items-center lg:justify-center">
               <button type="button" aria-label="Toggle Cart" x-on:click="
             if ($store.cartCount.isCountChanged) {
@@ -525,9 +530,9 @@
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </div>
+    </div>
     </div>
     <div class="home lg:hidden">
       <div
@@ -616,17 +621,50 @@
       <div
         class="relative sm:absolute z-10 w-full h-full px-4 max-w-content mx-auto text-center sm:-translate-x-1/2 sm:left-1/2 sm:transform">
         <div class="w-full h-full text-light flex flex-col items-left justify-left">
-<!-- LOGOOOO -->
+          <!-- LOGOOOO -->
           <a href="index.html" class="lg:block text-light lg:text-primary">
-          <img src="images/background-images/11111.png" width="200" height=200" alt="gov-logo-gold">
-        </a>
+            <img src="images/background-images/11111.png" width="200" height=200" alt="gov-logo-gold">
+          </a>
 
-          
-         <h1 class="font-yeseva-one text-5xl font-semibold mb-6" style="text-shadow: 0px 0px 20px rgba(0,0,0,0.7);">
-            Greentech For Women <br>
-          </h1>
 
-          <h1 class="font-yeseva-one text-5xl font-semibold mb-6 items-left justify-left">
+<!-- 
+          <h1 class="text-5xl mb-6 tracking-wide"
+            style="font-family: 'Merriweather', serif; font-weight: 700; text-shadow: 0px 0px 15px rgba(0,0,0,0.3); letter-spacing: 0.05em;">
+            Greentech for Women
+          </h1> -->
+
+          <!-- <h1 class="text-5xl mb-6 uppercase tracking-widest"
+    style="font-family: 'Adorn Serif', serif; font-weight: 400; letter-spacing: 0.15em; text-shadow: 0 0 60px rgba(0, 0, 0, 0.35);">
+  Greentech For Women
+</h1> -->
+<h1 class="text-6xl mb-6 uppercase tracking-widest"
+  style="
+    font-family: 'Adorn Serif', serif;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-shadow:
+      0 0 3px rgba(255, 255, 255, 0.5),
+      0 0 5px rgba(255, 255, 255, 0.3),
+      0 0 7px rgba(255, 215, 0, 0.4);
+    color: #fefcea;
+  ">
+  Greentech For Women
+</h1>
+<!--aaaaaaaa-->
+<!-- <h1 class="text-4xl mb-6 "
+  style="
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-shadow:
+      0 0 3px rgba(255, 255, 255, 0.5),
+      0 0 5px rgba(255, 255, 255, 0.3),
+      0 0 7px rgba(255, 215, 0, 0.4);
+    color: #fefcea;
+  ">
+Empowering Women, Nurturing Lives & Building a Greener Future!
+</h1> -->
+          <h1 class="font-yeseva-one text-4xl font-semibold mb-6 items-left justify-left">
             Empowering Women, Nurturing Lives & Building a Greener Future!
           </h1>
 
@@ -637,53 +675,57 @@
 
         </div>
       </div>
-      <div class="w-full h-full absolute sm:relative top-0"><!-- background image BIII -->
-        <img src="images/background-images/smaller6.png" class="object-cover w-full h-full" alt="hero banner"
-          loading="lazy">
-      </div>
+<div class="w-full h-full absolute sm:relative top-0" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));">
+  <img src="images/background-images/smaller6.png" 
+       class="object-cover w-full h-full" 
+       alt="hero banner"
+       loading="lazy" 
+       style="filter: brightness(1);">
+</div>
+
     </div>
     <section class="relative px-4 pt-12 pb-12 text-center lg:pb-16 bg-light section-shadow mt-n7px">
       <div class="grid grid-cols-2 max-w-7xl mx-auto">
-       
 
-    <script>
-      if (window.location.hash === '#newsletter-signup') {
-        window.addEventListener('load', () => {
-          window.scrollTo(0, document.body.scrollHeight);
-        });
-      }
 
-      var vidDefer = document.getElementsByTagName('iframe');
-      for (var i = 0; i < vidDefer.length; i++) {
-        if (vidDefer[i].getAttribute('data-src')) {
-          vidDefer[i].setAttribute('src', vidDefer[i].getAttribute('data-src'));
-        }
-      }
-
-      document.querySelectorAll(".video-container").forEach((container) => {
-        const video = container.querySelector(".video-player");
-        const playOverlay = container.querySelector(".play-overlay");
-        const playButton = container.querySelector(".play-button");
-
-        video.addEventListener("play", () => {
-          console.log("Video started playing:", video.id);
-          playOverlay.style.opacity = 0;
-        });
-
-        video.addEventListener("pause", () => {
-          console.log("Video paused:", video.id);
-          playOverlay.style.opacity = 1;
-        });
-
-        playButton.addEventListener("click", () => {
-          if (video.paused) {
-            video.play();
-          } else {
-            video.pause();
+        <script>
+          if (window.location.hash === '#newsletter-signup') {
+            window.addEventListener('load', () => {
+              window.scrollTo(0, document.body.scrollHeight);
+            });
           }
-        });
-      });
-    </script>
+
+          var vidDefer = document.getElementsByTagName('iframe');
+          for (var i = 0; i < vidDefer.length; i++) {
+            if (vidDefer[i].getAttribute('data-src')) {
+              vidDefer[i].setAttribute('src', vidDefer[i].getAttribute('data-src'));
+            }
+          }
+
+          document.querySelectorAll(".video-container").forEach((container) => {
+            const video = container.querySelector(".video-player");
+            const playOverlay = container.querySelector(".play-overlay");
+            const playButton = container.querySelector(".play-button");
+
+            video.addEventListener("play", () => {
+              console.log("Video started playing:", video.id);
+              playOverlay.style.opacity = 0;
+            });
+
+            video.addEventListener("pause", () => {
+              console.log("Video paused:", video.id);
+              playOverlay.style.opacity = 1;
+            });
+
+            playButton.addEventListener("click", () => {
+              if (video.paused) {
+                video.play();
+              } else {
+                video.pause();
+              }
+            });
+          });
+        </script>
   </main>
 
 
@@ -697,7 +739,9 @@
         <p class="text-xl text-green-700">Advancing solutions for gender and climate justice in Nepal</p>
         <div class="flex flex-col sm:flex-row gap-4">
           <button class="bg-green-600 hover:bg-green-800 text-white py-2 px-6 rounded">Our Work</button>
-          <button class="border border-green-600 text-green-600 hover:bg-green-600 hover:text-white py-2 px-6 rounded">Get Involved</button>
+          <button
+            class="border border-green-600 text-green-600 hover:bg-green-600 hover:text-white py-2 px-6 rounded">Get
+            Involved</button>
         </div>
       </div>
       <div>
@@ -710,7 +754,8 @@
     <div class="container mx-auto px-4 text-center max-w-4xl">
       <h2 class="text-4xl font-bold text-green-800">About Greentech For Women</h2>
       <p class="mt-4 text-lg text-green-700">
-        Greentech For Women (GFW) is a legally registered, non-profit, non-political, and non-partisan organization based in Nepal.
+        Greentech For Women (GFW) is a legally registered, non-profit, non-political, and non-partisan organization
+        based in Nepal.
       </p>
       <blockquote class="mt-6 italic text-2xl font-semibold text-green-800">
         "Climate justice is not possible without gender justice."
@@ -722,7 +767,8 @@
         </div>
         <div class="bg-yellow-50 border border-green-300 p-6 rounded-xl">
           <h3 class="text-xl font-bold text-green-800 mb-2">Mission</h3>
-          <p class="text-green-700">Advancing ecofeminist solutions at the intersection of gender and climate justice</p>
+          <p class="text-green-700">Advancing ecofeminist solutions at the intersection of gender and climate justice
+          </p>
         </div>
         <div class="bg-yellow-50 border border-green-300 p-6 rounded-xl">
           <h3 class="text-xl font-bold text-green-800 mb-2">Impact</h3>
@@ -804,7 +850,7 @@
             <div class="md:mx-auto flex-1 uppercase font-medium">
               <ul class="flex flex-col gap-1">
                 <li>
-                  <a href="About.html" class="transition-all hover:text-light style="font-bold">About us</a>
+                  <a href="About.html" class="transition-all hover:text-light style=" font-bold">About us</a>
                 </li>
                 <li>
                   <a href="Activities.html" class="transition-all hover:text-light">Activities</a>
@@ -860,7 +906,7 @@
       </div>
     </div>
 
-    
+
     </div>
 
   </footer>
