@@ -612,10 +612,11 @@
             <img src="images/background-images/11111.png" width="200" height=200" alt="gov-logo-gold">
           </a>
 
-          
-          <h1 class="""">
+          <!-- 
+          <h1 class="text-5xl mb-6 tracking-wide"
+            style="font-family: 'Merriweather', serif; font-weight: 700; text-shadow: 0px 0px 15px rgba(0,0,0,0.3); letter-spacing: 0.05em;">
             Greentech for Women
-          </h1>
+          </h1> -->
 
           <!-- <h1 class="text-5xl mb-6 uppercase tracking-widest"
     style="font-family: 'Adorn Serif', serif; font-weight: 400; letter-spacing: 0.15em; text-shadow: 0 0 60px rgba(0, 0, 0, 0.35);">
@@ -647,12 +648,13 @@
   ">
 Empowering Women, Nurturing Lives & Building a Greener Future!
 </h1> -->
-<h1 class="font-yeseva-one text-4xl font-semibold mb-6 items-left justify-left"
-    style="font-size:clamp(1.5rem,5vw,3rem);">
-  Empowering Women, Nurturing Lives & Building a Greener Future!
-</h1>
+          <h1 class="font-yeseva-one text-4xl font-semibold mb-6 items-left justify-left">
+            Empowering Women, Nurturing Lives & Building a Greener Future!
+          </h1>
 
-
+          <h2 class="text-2xl mb-8">
+            <!-- Delivered Fresh Weekly, Designed to Elevate Your Wellbeing. -->
+          </h2>
 
 
         </div>
@@ -757,16 +759,6 @@ Empowering Women, Nurturing Lives & Building a Greener Future!
       </div>
     </div>
   </section>
-
-
-<div style="display: flex; justify-content: center; align-items: center; height: /* some height */;">
-  <img src="images/background-images/happy.png" style="max-width:80%; height:auto;" alt="Responsive centered image">
-</div>
-
-
-
-
-
 
   <footer class="px-4 pt-10 lg:py-16 bg-primary text-primary-cool">
     <div class="w-full mx-auto max-w-content">
@@ -913,16 +905,17 @@ Empowering Women, Nurturing Lives & Building a Greener Future!
 
 
   <!-- Alpine Plugins -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="../code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+  <script src="../cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  <script src="https://js.stripe.com/v3/" async></script>
 
-<script type="text/javascript" src="https://js.afterpay.com/afterpay-1.x.js" data-min="0.00" data-max="2000.00" async></script>
 
-<script src="https://js.stripe.com/v3/" async></script>
+  <script type="text/javascript" src="../js.afterpay.com/afterpay-1.x.js" data-min="0.00" data-max="2000.00"
+    async></script>
 
-<script src="js/app98f2.js?id=a91d2fe9af495f024cfe2633bc82c4c2"></script>
+  <script src="js/app98f2.js?id=a91d2fe9af495f024cfe2633bc82c4c2"></script>
 
   <script>
     $('.announcement-slider').slick({
