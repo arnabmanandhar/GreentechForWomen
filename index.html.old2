@@ -76,7 +76,6 @@
 
   <meta property="twitter:image" content="images/background-images/GFW_main.png" />
   <link href="https://fonts.googleapis.com/css2?family=Adorn+Serif&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
   <link rel="canonical" href="index.html">
   <!-- Anton (for bold sans serif) -->
@@ -614,7 +613,9 @@
           </a>
 
           
-
+          <h1 class="""">
+            Greentech for Women
+          </h1>
 
           <!-- <h1 class="text-5xl mb-6 uppercase tracking-widest"
     style="font-family: 'Adorn Serif', serif; font-weight: 400; letter-spacing: 0.15em; text-shadow: 0 0 60px rgba(0, 0, 0, 0.35);">
@@ -632,21 +633,6 @@
   ">
             Greentech For Women
           </h1>
-
-
-  <!-- <style>
-  /* Default margin-top for larger screens */
-  h1 {
-    margin-top: 0;
-  }
-
-  /* Add margin-top on mobile devices */
-  @media (max-width: 768px) {
-    h1 {
-      margin-top: 100px; /* Adjust this value as needed */
-    }
-  }
-</style> -->
           <!--aaaaaaaa-->
           <!-- <h1 class="text-4xl mb-6 "
   style="
@@ -724,7 +710,7 @@ Empowering Women, Nurturing Lives & Building a Greener Future!
 
 
   <!-- Hero Section -->
-  <!-- <section class="py-20 bg-gradient-to-br from-yellow-50 to-yellow-100">
+  <section class="py-20 bg-gradient-to-br from-yellow-50 to-yellow-100">
     <div class="container mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center">
       <div class="space-y-6">
         <h1 class="text-4xl lg:text-6xl font-bold text-green-800">
@@ -742,12 +728,12 @@ Empowering Women, Nurturing Lives & Building a Greener Future!
         <img src="/placeholder.svg" alt="Artwork" class="rounded-xl shadow-xl w-full max-w-md" />
       </div>
     </div>
-  </section> -->
+  </section>
   <!-- About Us -->
-  <section class="py-20 bg-gradient-to-br from-yellow-50 to-yellow-100">
+  <section id="about" class="py-20 bg-yellow-100">
     <div class="container mx-auto px-4 text-center max-w-4xl">
-      <h1 class="text-4xl lg:text-6xl font-bold text-green-800 mb-0 pt-6">About Greentech For Women</h1>
-      <p class="text-xl text-green-700">
+      <h2 class="text-4xl font-bold text-green-800">About Greentech For Women</h2>
+      <p class="mt-4 text-lg text-green-700">
         Greentech For Women (GFW) is a legally registered, non-profit, non-political, and non-partisan organization
         based in Nepal.
       </p>
@@ -756,18 +742,15 @@ Empowering Women, Nurturing Lives & Building a Greener Future!
       </blockquote>
       <div class="grid md:grid-cols-3 gap-8 mt-16">
         <div class="bg-yellow-50 border border-green-300 p-6 rounded-xl">
-          <i class="fa fa-3x m-3 fa-flag" style="color: rgb(243, 195, 63);" title aria-describedby="tooltip787478"></i>
           <h3 class="text-xl font-bold text-green-800 mb-2">Founded</h3>
           <p class="text-green-700">Established as a legally registered non-profit organization in Nepal</p>
         </div>
         <div class="bg-yellow-50 border border-green-300 p-6 rounded-xl">
-                    <i class="fa fa-3x m-3 fa-bullseye" style="color: rgb(243, 195, 63);" title aria-describedby="tooltip787478"></i>
           <h3 class="text-xl font-bold text-green-800 mb-2">Mission</h3>
           <p class="text-green-700">Advancing ecofeminist solutions at the intersection of gender and climate justice
           </p>
-        </div>  
+        </div>
         <div class="bg-yellow-50 border border-green-300 p-6 rounded-xl">
-          <i class="fa fa-3x m-3 fa-users" style="color: rgb(243, 195, 63);" title aria-describedby="tooltip787478"></i>
           <h3 class="text-xl font-bold text-green-800 mb-2">Impact</h3>
           <p class="text-green-700">Representing grassroots voices on global platforms and policy forums</p>
         </div>
@@ -776,20 +759,10 @@ Empowering Women, Nurturing Lives & Building a Greener Future!
   </section>
 
 
-<!-- <div style="display: flex; justify-content: center; align-items: center; height: /* some height */;">
+<div style="display: flex; justify-content: center; align-items: center; height: /* some height */;">
   <img src="images/background-images/happy.png" style="max-width:80%; height:auto;" alt="Responsive centered image">
-</div> -->
+</div>
 
-<picture>
-  <!-- Desktop image -->
-  <source srcset="images/background-images/happy.png" media="(min-width: 769px)">
-  
-  <!-- Mobile image -->
-  <source srcset="" media="(max-width: 768px)">
-  
-  <!-- Fallback image -->
-  <img src="images/background-images/happy2.png" alt="Responsive Image">
-</picture>
 
 
 
