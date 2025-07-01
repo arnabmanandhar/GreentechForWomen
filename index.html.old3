@@ -678,7 +678,8 @@ Empowering Women, Nurturing Lives & Building a Greener Future!
       </div>
 
     </div>
-  
+    <section class="relative px-4 pt-12 pb-12 text-center lg:pb-16 bg-light section-shadow mt-n7px">
+      <div class="grid grid-cols-2 max-w-7xl mx-auto">
 
 
         <script>
@@ -743,7 +744,7 @@ Empowering Women, Nurturing Lives & Building a Greener Future!
     </div>
   </section> -->
   <!-- About Us -->
-  <section class="py-20 bg-gradient-to-br from-yellow-50 to-yellow-100 pt00">
+  <section class="py-20 bg-gradient-to-br from-yellow-50 to-yellow-100">
     <div class="container mx-auto px-4 text-center max-w-4xl">
       <h1 class="text-4xl lg:text-6xl font-bold text-green-800 mb-0 pt-6">About Greentech For Women</h1>
       <p class="text-xl text-green-700">
