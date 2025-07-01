@@ -80,7 +80,7 @@
   <link rel="canonical" href="index.html">
   <!-- Anton (for bold sans serif) -->
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- OR Cormorant (for royal serif) -->
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
@@ -336,9 +336,13 @@
           </button>
         </div>
         <!-- logoooo -->
-        <a href="index.html" class="lg:block text-light lg:text-primary">
+        <a href="index.html" class="hidden lg:block text-light lg:text-primary">
           <img src="images/background-images/gfw_logo.png" width="100" height=100" alt="gov-logo-gold">
         </a>
+        <a href="index.html" class="block lg:hidden text-light">
+          <img src="images/background-images/11111.png" width="130" height="130" alt="gov-logo-gold">
+        </a>
+
 
 
         <div x-cloak x-transition:enter="transition ease-out duration-300"
@@ -348,7 +352,7 @@
                'opacity-0 pointer-events-none hidden lg:opacity-100 lg:pointer-events-auto'"
           class="flex-grow w-full lg:w-max absolute lg:block lg:static top-[99%] left-0 right-0 h-auto border-t-2 border-t-primary bg-light p-10 transition-all duration-300 lg:pointer-events-auto lg:max-h-full lg:transform-none lg:overflow-visible lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 lg:transition-none pointer-events-auto">
           <ul
-            class="flex flex-col gap-6 text-base leading-[18px] lg:flex-row lg:items-center lg:justify-end lg:text-sm">
+            class="flex flex-col gap-6 text-base leading-[18px] lg:flex-row lg:items-center lg:justify-end lg:text-lg">
             <li class="lg:flex lg:items-center lg:justify-center">
               <a href="About Us.html"
                 class="uppercase transition-all duration-300 ease-in-out text-primary-light lg:text-primary">
@@ -395,8 +399,8 @@
               <div
                 class="uppercase transition-all duration-300 ease-in-out text-primary-light lg:text-primary flex items-stretch justify-between gap-2.5 lg:justify-center lg:group-hover:text-light">
 
-                <a href="about-us.html">
-                  About
+                <a href="vision.html">
+                  Our Vision
                 </a>
 
 
@@ -409,208 +413,190 @@
                     wire:effects="{&quot;listeners&quot;:[&quot;cartUpdated&quot;],&quot;dispatches&quot;:[{&quot;name&quot;:&quot;updateCartCountStore&quot;,&quot;params&quot;:[0]}]}"
                     wire:id="89jgNq84VNY6DBAO4KBQ"
                     x-data="{ clearCart: window.Livewire.find('89jgNq84VNY6DBAO4KBQ').entangle('clearCart').live }">
-            <li class="flex lg:items-center lg:justify-center">
-              <button type="button" aria-label="Toggle Cart" x-on:click="
-            if ($store.cartCount.isCountChanged) {
-                $wire.updateCart();
-                cartOpen = !cartOpen;
-                $store.cartCount.setIsCountChanged();
-            } else {
-                cartOpen = !cartOpen;
-            }" class="relative uppercase transition-all cursor-pointer cartOpen">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
-                  <path data-name="Path / cart"
-                    d="M16 16a2 2 0 1 0 2 2 1.993 1.993 0 0 0-2-2M0 0v2h2l3.6 7.59-1.36 2.45A2.038 2.038 0 0 0 4 13a2 2 0 0 0 2 2h12v-2H6.42a.25.25 0 0 1-.25-.25.213.213 0 0 1 .03-.12L7.1 11h7.45a2.011 2.011 0 0 0 1.75-1.03l3.58-6.47A1.265 1.265 0 0 0 20 3a1 1 0 0 0-1-1H4.21l-.94-2M6 16a2 2 0 1 0 2 2 1.993 1.993 0 0 0-2-2Z"
-                    fill="currentColor" />
-                </svg>
-                <template x-if="$store.cartCount.count > 0">
-                  <span x-text="$store.cartCount.count"
-                    class="absolute top-1 right-0 translate-x-2/3 -translate-y-2/3  items-center px-1.5 py-0.5 border-1 border-white rounded-full text-xs font-semibold leading-4 bg-red-500 text-white">
-                  </span>
-                </template>
-              </button>
-            </li>
 
-            <div x-cloak>
-              <div x-bind:class="cartOpen ? 'opacity-100 visible' : 'opacity-0 invisible'" @click="cartOpen = false"
-                aria-hidden="true"
-                class="fixed top-0 right-0 z-[40] w-full h-full transition duration-300 ease-in-out bg-black bg-opacity-40">
-              </div>
 
-              <div x-bind:class="cartOpen ? 'translate-x-0 visible' : 'translate-x-full'"
-                class="fixed top-0 right-0 z-50 w-full h-full max-w-md overflow-hidden overflow-y-auto transition duration-300 ease-in-out transform md:w-10/12 bg-light">
-                <div class="flex flex-col h-full px-4 py-6 overflow-x-hidden">
-                  <div class="flex flex-col h-full">
-                    <div class="flex flex-col flex-grow w-full h-1/2">
-                      <div
-                        class="flex justify-between w-full gap-3 pb-3 mb-3 border-b sm:flex-wrap sm:items-center md:pb-5 md:mb-5 border-b-primary-cool">
-                        <div class="flex items-center gap-x-2">
-                          <h2 class="flex-grow text-lg font-bold text-primary ">Order Details</h2>
+                    <div x-cloak>
+                      <div x-bind:class="cartOpen ? 'opacity-100 visible' : 'opacity-0 invisible'"
+                        @click="cartOpen = false" aria-hidden="true"
+                        class="fixed top-0 right-0 z-[40] w-full h-full transition duration-300 ease-in-out bg-black bg-opacity-40">
+                      </div>
 
-                          <button type="button" aria-label="Clear Cart"
-                            class="underline text-primary hover:text-primary" @click="clearCart = true">Clear
-                            Cart</button>
+                      <div x-bind:class="cartOpen ? 'translate-x-0 visible' : 'translate-x-full'"
+                        class="fixed top-0 right-0 z-50 w-full h-full max-w-md overflow-hidden overflow-y-auto transition duration-300 ease-in-out transform md:w-10/12 bg-light">
+                        <div class="flex flex-col h-full px-4 py-6 overflow-x-hidden">
+                          <div class="flex flex-col h-full">
+                            <div class="flex flex-col flex-grow w-full h-1/2">
+                              <div
+                                class="flex justify-between w-full gap-3 pb-3 mb-3 border-b sm:flex-wrap sm:items-center md:pb-5 md:mb-5 border-b-primary-cool">
+                                <div class="flex items-center gap-x-2">
+                                  <h2 class="flex-grow text-lg font-bold text-primary ">Order Details</h2>
+
+                                  <button type="button" aria-label="Clear Cart"
+                                    class="underline text-primary hover:text-primary" @click="clearCart = true">Clear
+                                    Cart</button>
+                                </div>
+
+                                <button type="button" aria-label="Close Cart" x-on:click.prevent="cartOpen = false"
+                                  class="underline text-primary hover:text-primary">
+                                  <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary"
+                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentcolor" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <line x1="18" y1="6" x2="6" y2="18" />
+                                    <line x1="6" y1="6" x2="18" y2="18" />
+                                  </svg>
+                                </button>
+                              </div>
+                              <div class="flex-grow space-y-2.5 lg:pr-8 scrollbar-1x overflow-auto detail-container">
+                                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+                                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+                              </div>
+
+                            </div>
+
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+
+                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+
+                            <ul class="flex space-x-2">
+                              <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+                              <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+                            </ul>
+
+                            <hr class="block my-3 md:my-5 border-primary-cool border-opacity-30">
+
+                            <ul class="text-sm space-y-2.5 block text-gray-200">
+                              <li class="flex items-center justify-between gap-3">
+                                <span class="font-semibold">Subtotal</span>
+                                <span class="font-semibold">
+                                  $0.00 </span>
+                              </li>
+
+                              <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+
+                              <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+
+                              <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+
+                              <!--[if ENDBLOCK]><![endif]-->
+
+                              <li>
+                                <hr class="my-5 border-primary">
+                              </li>
+
+                              <li class="flex items-center justify-between gap-3 text-base md:text-lg text-primary">
+                                <span class="uppercase">Total</span>
+                                <p class="text-lg font-bold">$0.00</p>
+                              </li>
+                            </ul>
+
+                            <!--[if BLOCK]><![endif]--> <!--[if BLOCK]><![endif]-->
+                            <div class="w-full mt-3 text-white bg-primary-light md:mt-5 btn">Minimum Order $79.00</div>
+                            <!--[if ENDBLOCK]><![endif]-->
+                            <!--[if ENDBLOCK]><![endif]-->
+                          </div>
                         </div>
-
-                        <button type="button" aria-label="Close Cart" x-on:click.prevent="cartOpen = false"
-                          class="underline text-primary hover:text-primary">
-                          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary" viewBox="0 0 24 24"
-                            stroke-width="1.5" stroke="currentcolor" fill="none" stroke-linecap="round"
-                            stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                            <line x1="18" y1="6" x2="6" y2="18" />
-                            <line x1="6" y1="6" x2="18" y2="18" />
-                          </svg>
-                        </button>
                       </div>
-                      <div class="flex-grow space-y-2.5 lg:pr-8 scrollbar-1x overflow-auto detail-container">
-                        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
-                        <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
-                      </div>
-
                     </div>
 
-                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+                    <div x-cloak x-show="clearCart == true" class="absolute top-0 left-0 w-full h-screen z-[999]">
+                      <div class="relative flex items-center justify-center w-full h-full">
+                        <div
+                          class="flex flex-col items-center justify-center px-10 py-4 bg-light rounded-md max-w-[95%] md:max-w-none">
+                          <h2 class="text-2xl text-center text-black">Are you sure you want to clear your entire cart?
+                          </h2>
 
-                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
-
-                    <ul class="flex space-x-2">
-                      <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
-                      <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
-                    </ul>
-
-                    <hr class="block my-3 md:my-5 border-primary-cool border-opacity-30">
-
-                    <ul class="text-sm space-y-2.5 block text-gray-200">
-                      <li class="flex items-center justify-between gap-3">
-                        <span class="font-semibold">Subtotal</span>
-                        <span class="font-semibold">
-                          $0.00 </span>
-                      </li>
-
-                      <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
-
-                      <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
-
-                      <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
-
-                      <!--[if ENDBLOCK]><![endif]-->
-
-                      <li>
-                        <hr class="my-5 border-primary">
-                      </li>
-
-                      <li class="flex items-center justify-between gap-3 text-base md:text-lg text-primary">
-                        <span class="uppercase">Total</span>
-                        <p class="text-lg font-bold">$0.00</p>
-                      </li>
-                    </ul>
-
-                    <!--[if BLOCK]><![endif]--> <!--[if BLOCK]><![endif]-->
-                    <div class="w-full mt-3 text-white bg-primary-light md:mt-5 btn">Minimum Order $79.00</div>
-                    <!--[if ENDBLOCK]><![endif]-->
-                    <!--[if ENDBLOCK]><![endif]-->
+                          <div class="flex flex-col items-center justify-center mt-6 space-y-4">
+                            <button class="btn w-max"
+                              x-on:click="$store.cartCount.setCount(0);$wire.clearCartData()">Yes, clear
+                              my cart</button>
+                            <button type="button" aria-label="Cancel" class="text-black"
+                              @click="clearCart = false">Cancel</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div x-cloak x-show="clearCart == true" class="absolute top-0 left-0 w-full h-screen z-[999]">
-              <div class="relative flex items-center justify-center w-full h-full">
-                <div
-                  class="flex flex-col items-center justify-center px-10 py-4 bg-light rounded-md max-w-[95%] md:max-w-none">
-                  <h2 class="text-2xl text-center text-black">Are you sure you want to clear your entire cart?</h2>
-
-                  <div class="flex flex-col items-center justify-center mt-6 space-y-4">
-                    <button class="btn w-max" x-on:click="$store.cartCount.setCount(0);$wire.clearCartData()">Yes, clear
-                      my cart</button>
-                    <button type="button" aria-label="Cancel" class="text-black"
-                      @click="clearCart = false">Cancel</button>
-                  </div>
-                </div>
-              </div>
-            </div>
         </div>
-      </div>
-    </div>
-    </div>
-    <div class="home lg:hidden">
-      <div
-        wire:snapshot="{&quot;data&quot;:{&quot;showDeliveryWindow&quot;:false,&quot;postcode&quot;:null,&quot;checkedDelivery&quot;:null,&quot;shippingMethods&quot;:null,&quot;component&quot;:null,&quot;freeShippingThreshold&quot;:300,&quot;minimumSpendThreshold&quot;:79,&quot;shippingPrice&quot;:30},&quot;memo&quot;:{&quot;id&quot;:&quot;qBAw1vSiJmVFfNWw0U6k&quot;,&quot;name&quot;:&quot;check-if-we-deliver&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;a855b7c2ca0da55ad8019c347bb707e2cc6195df08c4b57daf8090e01ee0b206&quot;}"
-        wire:effects="[]" wire:id="qBAw1vSiJmVFfNWw0U6k" class="flex mx-auto bg-primary-light h-12 lg:bg-transparent"
-        id="check-delivery">
-        <div class="flex items-center gap-3 text-xs cursor-pointer sm:text-sm  justify-center text-light w-full"
-          wire:click='toggleDeliveryWindow'>
-
-          <!-- [if BLOCK]><![endif] <img src="images/icons/delivery-icon.svg" class="w-6 h-6" alt="image"> -->
-          <!--[if ENDBLOCK]><![endif]-->
-
-          <!--[if BLOCK]><![endif]-->
-          <!-- <h3 class="font-medium uppercase lg:normal-case tracking-widest lg:tracking-normal lg:font-normal">Check if we
-            deliver to you</h3> -->
-          <!--[if ENDBLOCK]><![endif]-->
-        </div>
-
-        <div x-data="{ open: window.Livewire.find('qBAw1vSiJmVFfNWw0U6k').entangle('showDeliveryWindow').live }"
-          x-cloak>
-
-          <!-- overlay -->
-          <div x-bind:class="open ? 'opacity-100 visible' : 'opacity-0 invisible'"
-            class="fixed top-0 right-0 z-50 w-full h-full transition duration-300 ease-in-out bg-black bg-opacity-40">
-          </div>
-          <!-- END overlay -->
-
+        <div class="home lg:hidden">
           <div
-            class="fixed top-0 right-0 z-50 w-full h-screen max-w-[18rem] md:max-w-sm duration-500 transform bg-light text-primary"
-            x-bind:class="open ? 'transform-x-0 pointer-events-auto' : 'translate-x-full pointer-events-none'"
-            @click.away="open = false">
+            wire:snapshot="{&quot;data&quot;:{&quot;showDeliveryWindow&quot;:false,&quot;postcode&quot;:null,&quot;checkedDelivery&quot;:null,&quot;shippingMethods&quot;:null,&quot;component&quot;:null,&quot;freeShippingThreshold&quot;:300,&quot;minimumSpendThreshold&quot;:79,&quot;shippingPrice&quot;:30},&quot;memo&quot;:{&quot;id&quot;:&quot;qBAw1vSiJmVFfNWw0U6k&quot;,&quot;name&quot;:&quot;check-if-we-deliver&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;en&quot;},&quot;checksum&quot;:&quot;a855b7c2ca0da55ad8019c347bb707e2cc6195df08c4b57daf8090e01ee0b206&quot;}"
+            wire:effects="[]" wire:id="qBAw1vSiJmVFfNWw0U6k"
+            class="flex mx-auto bg-primary-light h-12 lg:bg-transparent" id="check-delivery">
+            <div class="flex items-center gap-3 text-xs cursor-pointer sm:text-sm  justify-center text-light w-full"
+              wire:click='toggleDeliveryWindow'>
 
-            <div class="relative flex justify-center w-full h-full">
-              <div class="absolute cursor-pointer top-2 left-2" @click="open = false">
-                <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                    d="M17.25 6.75L6.75 17.25"></path>
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                    d="M6.75 6.75L17.25 17.25"></path>
-                </svg>
+              <!-- [if BLOCK]><![endif] <img src="images/icons/delivery-icon.svg" class="w-6 h-6" alt="image"> -->
+              <!--[if ENDBLOCK]><![endif]-->
+
+              <!--[if BLOCK]><![endif]-->
+              <!-- <h3 class="font-medium uppercase lg:normal-case tracking-widest lg:tracking-normal lg:font-normal">Check if we
+            deliver to you</h3> -->
+              <!--[if ENDBLOCK]><![endif]-->
+            </div>
+
+            <div x-data="{ open: window.Livewire.find('qBAw1vSiJmVFfNWw0U6k').entangle('showDeliveryWindow').live }"
+              x-cloak>
+
+              <!-- overlay -->
+              <div x-bind:class="open ? 'opacity-100 visible' : 'opacity-0 invisible'"
+                class="fixed top-0 right-0 z-50 w-full h-full transition duration-300 ease-in-out bg-black bg-opacity-40">
               </div>
+              <!-- END overlay -->
 
-              <div class="pt-24 text-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="43" height="46" viewBox="0 0 43 46" fill="none"
-                  class="w-12 h-12 mx-auto ">
-                  <path
-                    d="M30.2519 16.1959C29.9472 15.2398 29.3673 14.4083 28.5934 13.8178C27.8195 13.2272 26.8903 12.9073 25.9359 12.9026H21.5115C22.2635 11.3999 22.73 9.75619 22.8846 8.0641C22.8846 5.92537 22.0809 3.87423 20.6504 2.36192C19.2198 0.849608 17.2795 0 15.2564 0C13.2333 0 11.293 0.849608 9.86246 2.36192C8.43189 3.87423 7.62821 5.92537 7.62821 8.0641C7.78284 9.75619 8.2493 11.3999 9.00128 12.9026H4.57692C3.36305 12.9026 2.19889 13.4123 1.34055 14.3197C0.48221 15.2271 0 16.4578 0 17.741V33.8692C0.00429159 34.9298 0.338088 35.9595 0.950037 36.7999C1.56199 37.6403 2.41819 38.2449 3.38692 38.5206C3.02238 39.4822 2.95942 40.5421 3.2073 41.5444C3.45518 42.5467 4.00081 43.4384 4.76393 44.0883C5.52704 44.7382 6.46733 45.1121 7.44645 45.1548C8.42558 45.1976 9.39184 44.907 10.2031 44.3258C11.0143 43.7447 11.6276 42.9036 11.9529 41.9263C12.2781 40.9491 12.2981 39.8873 12.0098 38.8972C11.7215 37.9071 11.1402 37.0409 10.3515 36.4261C9.56274 35.8113 8.60816 35.4804 7.62821 35.4821H4.57692C4.1723 35.4821 3.78425 35.3121 3.49813 35.0097C3.21202 34.7072 3.05128 34.297 3.05128 33.8692V17.741C3.05128 17.3133 3.21202 16.9031 3.49813 16.6006C3.78425 16.2981 4.1723 16.1282 4.57692 16.1282H10.5849C11.9976 18.7668 13.4836 21.1005 14.0008 21.8827C14.1411 22.0976 14.3287 22.2733 14.5474 22.3947C14.7661 22.516 15.0094 22.5794 15.2564 22.5794C15.5034 22.5794 15.7467 22.516 15.9654 22.3947C16.1841 22.2733 16.3717 22.0976 16.512 21.8827C17.0231 21.1005 18.5152 18.7668 19.9279 16.1282H25.9359C26.3405 16.1282 26.7286 16.2981 27.0147 16.6006C27.3008 16.9031 27.4615 17.3133 27.4615 17.741V35.4821H16.7821C16.3774 35.4821 15.9894 35.652 15.7033 35.9544C15.4171 36.2569 15.2564 36.6671 15.2564 37.0949C15.2564 37.5226 15.4171 37.9328 15.7033 38.2353C15.9894 38.5378 16.3774 38.7077 16.7821 38.7077H27.7423C27.5616 39.2242 27.4666 39.7698 27.4615 40.3205C27.4615 41.6038 27.9437 42.8344 28.8021 43.7418C29.6604 44.6492 30.8246 45.159 32.0385 45.159C33.2523 45.159 34.4165 44.6492 35.2748 43.7418C36.1332 42.8344 36.6154 41.6038 36.6154 40.3205C36.6103 39.7698 36.5154 39.2242 36.3347 38.7077H38.141C39.3549 38.7077 40.5191 38.1979 41.3774 37.2905C42.2357 36.3832 42.718 35.1525 42.718 33.8692V30.6436C42.7134 27.0273 41.4334 23.5428 39.1281 20.871C36.8228 18.1993 33.6579 16.5323 30.2519 16.1959V16.1959ZM7.62821 41.9333C7.32646 41.9333 7.0315 41.8387 6.7806 41.6615C6.52971 41.4843 6.33417 41.2324 6.2187 40.9377C6.10322 40.643 6.07301 40.3187 6.13188 40.0059C6.19075 39.693 6.33605 39.4056 6.54941 39.1801C6.76278 38.9545 7.03462 38.8009 7.33057 38.7387C7.62651 38.6765 7.93327 38.7084 8.21204 38.8305C8.49082 38.9525 8.72909 39.1593 8.89673 39.4245C9.06437 39.6897 9.15385 40.0015 9.15385 40.3205C9.15385 40.7483 8.99311 41.1585 8.707 41.461C8.42088 41.7634 8.03283 41.9333 7.62821 41.9333ZM15.2564 18.0507C13.061 14.4235 10.6795 9.82853 10.6795 8.0641C10.6795 6.78086 11.1617 5.55018 12.02 4.64279C12.8784 3.73541 14.0425 3.22564 15.2564 3.22564C16.4703 3.22564 17.6344 3.73541 18.4928 4.64279C19.3511 5.55018 19.8333 6.78086 19.8333 8.0641C19.8333 9.8253 17.4518 14.4218 15.2564 18.0507ZM33.5641 40.3205C33.5641 40.6395 33.4746 40.9513 33.307 41.2165C33.1393 41.4818 32.9011 41.6885 32.6223 41.8106C32.3435 41.9326 32.0368 41.9646 31.7408 41.9023C31.4449 41.8401 31.173 41.6865 30.9597 41.461C30.7463 41.2354 30.601 40.948 30.5421 40.6352C30.4833 40.3223 30.5135 39.998 30.629 39.7033C30.7444 39.4086 30.94 39.1567 31.1909 38.9795C31.4418 38.8023 31.7367 38.7077 32.0385 38.7077C32.4431 38.7077 32.8311 38.8776 33.1173 39.1801C33.4034 39.4825 33.5641 39.8928 33.5641 40.3205ZM39.6667 33.8692C39.6667 34.297 39.5059 34.7072 39.2198 35.0097C38.9337 35.3121 38.5457 35.4821 38.141 35.4821H30.5128V19.4684C33.0533 19.8597 35.3758 21.204 37.0564 23.2557C38.737 25.3073 39.6635 27.9296 39.6667 30.6436V33.8692Z"
-                    fill="currentColor" />
-                  <path
-                    d="M15.2564 9.67681C16.0989 9.67681 16.782 8.95473 16.782 8.06399C16.782 7.17326 16.0989 6.45117 15.2564 6.45117C14.4138 6.45117 13.7307 7.17326 13.7307 8.06399C13.7307 8.95473 14.4138 9.67681 15.2564 9.67681Z"
-                    fill="currentColor" />
-                </svg>
+              <div
+                class="fixed top-0 right-0 z-50 w-full h-screen max-w-[18rem] md:max-w-sm duration-500 transform bg-light text-primary"
+                x-bind:class="open ? 'transform-x-0 pointer-events-auto' : 'translate-x-full pointer-events-none'"
+                @click.away="open = false">
 
-                <!--[if BLOCK]><![endif]-->
-                <div class="flex flex-col px-5 py-4 mx-auto space-y-4 w-max">
-                  <div class="w-full">
-                    <input wire:model.live="postcode" type="number" class="block w-full peer theme-input-primary-cool"
-                      placeholder="Your Postcode">
+                <div class="relative flex justify-center w-full h-full">
+                  <div class="absolute cursor-pointer top-2 left-2" @click="open = false">
+                    <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M17.25 6.75L6.75 17.25"></path>
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M6.75 6.75L17.25 17.25"></path>
+                    </svg>
                   </div>
-                  <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
-                  <div class="w-full">
-                    <button type="button" aria-label="Check Postcode" wire:click="checkPostcode"
-                      class="cursor-pointer btn">Check My Postcode</button>
+
+                  <div class="pt-24 text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="43" height="46" viewBox="0 0 43 46" fill="none"
+                      class="w-12 h-12 mx-auto ">
+                      <path
+                        d="M30.2519 16.1959C29.9472 15.2398 29.3673 14.4083 28.5934 13.8178C27.8195 13.2272 26.8903 12.9073 25.9359 12.9026H21.5115C22.2635 11.3999 22.73 9.75619 22.8846 8.0641C22.8846 5.92537 22.0809 3.87423 20.6504 2.36192C19.2198 0.849608 17.2795 0 15.2564 0C13.2333 0 11.293 0.849608 9.86246 2.36192C8.43189 3.87423 7.62821 5.92537 7.62821 8.0641C7.78284 9.75619 8.2493 11.3999 9.00128 12.9026H4.57692C3.36305 12.9026 2.19889 13.4123 1.34055 14.3197C0.48221 15.2271 0 16.4578 0 17.741V33.8692C0.00429159 34.9298 0.338088 35.9595 0.950037 36.7999C1.56199 37.6403 2.41819 38.2449 3.38692 38.5206C3.02238 39.4822 2.95942 40.5421 3.2073 41.5444C3.45518 42.5467 4.00081 43.4384 4.76393 44.0883C5.52704 44.7382 6.46733 45.1121 7.44645 45.1548C8.42558 45.1976 9.39184 44.907 10.2031 44.3258C11.0143 43.7447 11.6276 42.9036 11.9529 41.9263C12.2781 40.9491 12.2981 39.8873 12.0098 38.8972C11.7215 37.9071 11.1402 37.0409 10.3515 36.4261C9.56274 35.8113 8.60816 35.4804 7.62821 35.4821H4.57692C4.1723 35.4821 3.78425 35.3121 3.49813 35.0097C3.21202 34.7072 3.05128 34.297 3.05128 33.8692V17.741C3.05128 17.3133 3.21202 16.9031 3.49813 16.6006C3.78425 16.2981 4.1723 16.1282 4.57692 16.1282H10.5849C11.9976 18.7668 13.4836 21.1005 14.0008 21.8827C14.1411 22.0976 14.3287 22.2733 14.5474 22.3947C14.7661 22.516 15.0094 22.5794 15.2564 22.5794C15.5034 22.5794 15.7467 22.516 15.9654 22.3947C16.1841 22.2733 16.3717 22.0976 16.512 21.8827C17.0231 21.1005 18.5152 18.7668 19.9279 16.1282H25.9359C26.3405 16.1282 26.7286 16.2981 27.0147 16.6006C27.3008 16.9031 27.4615 17.3133 27.4615 17.741V35.4821H16.7821C16.3774 35.4821 15.9894 35.652 15.7033 35.9544C15.4171 36.2569 15.2564 36.6671 15.2564 37.0949C15.2564 37.5226 15.4171 37.9328 15.7033 38.2353C15.9894 38.5378 16.3774 38.7077 16.7821 38.7077H27.7423C27.5616 39.2242 27.4666 39.7698 27.4615 40.3205C27.4615 41.6038 27.9437 42.8344 28.8021 43.7418C29.6604 44.6492 30.8246 45.159 32.0385 45.159C33.2523 45.159 34.4165 44.6492 35.2748 43.7418C36.1332 42.8344 36.6154 41.6038 36.6154 40.3205C36.6103 39.7698 36.5154 39.2242 36.3347 38.7077H38.141C39.3549 38.7077 40.5191 38.1979 41.3774 37.2905C42.2357 36.3832 42.718 35.1525 42.718 33.8692V30.6436C42.7134 27.0273 41.4334 23.5428 39.1281 20.871C36.8228 18.1993 33.6579 16.5323 30.2519 16.1959V16.1959ZM7.62821 41.9333C7.32646 41.9333 7.0315 41.8387 6.7806 41.6615C6.52971 41.4843 6.33417 41.2324 6.2187 40.9377C6.10322 40.643 6.07301 40.3187 6.13188 40.0059C6.19075 39.693 6.33605 39.4056 6.54941 39.1801C6.76278 38.9545 7.03462 38.8009 7.33057 38.7387C7.62651 38.6765 7.93327 38.7084 8.21204 38.8305C8.49082 38.9525 8.72909 39.1593 8.89673 39.4245C9.06437 39.6897 9.15385 40.0015 9.15385 40.3205C9.15385 40.7483 8.99311 41.1585 8.707 41.461C8.42088 41.7634 8.03283 41.9333 7.62821 41.9333ZM15.2564 18.0507C13.061 14.4235 10.6795 9.82853 10.6795 8.0641C10.6795 6.78086 11.1617 5.55018 12.02 4.64279C12.8784 3.73541 14.0425 3.22564 15.2564 3.22564C16.4703 3.22564 17.6344 3.73541 18.4928 4.64279C19.3511 5.55018 19.8333 6.78086 19.8333 8.0641C19.8333 9.8253 17.4518 14.4218 15.2564 18.0507ZM33.5641 40.3205C33.5641 40.6395 33.4746 40.9513 33.307 41.2165C33.1393 41.4818 32.9011 41.6885 32.6223 41.8106C32.3435 41.9326 32.0368 41.9646 31.7408 41.9023C31.4449 41.8401 31.173 41.6865 30.9597 41.461C30.7463 41.2354 30.601 40.948 30.5421 40.6352C30.4833 40.3223 30.5135 39.998 30.629 39.7033C30.7444 39.4086 30.94 39.1567 31.1909 38.9795C31.4418 38.8023 31.7367 38.7077 32.0385 38.7077C32.4431 38.7077 32.8311 38.8776 33.1173 39.1801C33.4034 39.4825 33.5641 39.8928 33.5641 40.3205ZM39.6667 33.8692C39.6667 34.297 39.5059 34.7072 39.2198 35.0097C38.9337 35.3121 38.5457 35.4821 38.141 35.4821H30.5128V19.4684C33.0533 19.8597 35.3758 21.204 37.0564 23.2557C38.737 25.3073 39.6635 27.9296 39.6667 30.6436V33.8692Z"
+                        fill="currentColor" />
+                      <path
+                        d="M15.2564 9.67681C16.0989 9.67681 16.782 8.95473 16.782 8.06399C16.782 7.17326 16.0989 6.45117 15.2564 6.45117C14.4138 6.45117 13.7307 7.17326 13.7307 8.06399C13.7307 8.95473 14.4138 9.67681 15.2564 9.67681Z"
+                        fill="currentColor" />
+                    </svg>
+
+                    <!--[if BLOCK]><![endif]-->
+                    <div class="flex flex-col px-5 py-4 mx-auto space-y-4 w-max">
+                      <div class="w-full">
+                        <input wire:model.live="postcode" type="number"
+                          class="block w-full peer theme-input-primary-cool" placeholder="Your Postcode">
+                      </div>
+                      <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+                      <div class="w-full">
+                        <button type="button" aria-label="Check Postcode" wire:click="checkPostcode"
+                          class="cursor-pointer btn">Check My Postcode</button>
+                      </div>
+                    </div>
+                    <!--[if ENDBLOCK]><![endif]-->
+
+                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
+
+                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
                   </div>
                 </div>
-                <!--[if ENDBLOCK]><![endif]-->
-
-                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
-
-                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
 
-    <span class="overlay"></span>
+        <span class="overlay"></span>
   </header>
   <div class="fake-header"></div>
 
@@ -622,12 +608,11 @@
         class="relative sm:absolute z-10 w-full h-full px-4 max-w-content mx-auto text-center sm:-translate-x-1/2 sm:left-1/2 sm:transform">
         <div class="w-full h-full text-light flex flex-col items-left justify-left">
           <!-- LOGOOOO -->
-          <a href="index.html" class="lg:block text-light lg:text-primary">
+          <a href="index.html" class="hidden lg:block text-light lg:text-primary">
             <img src="images/background-images/11111.png" width="200" height=200" alt="gov-logo-gold">
           </a>
 
-
-<!-- 
+          <!-- 
           <h1 class="text-5xl mb-6 tracking-wide"
             style="font-family: 'Merriweather', serif; font-weight: 700; text-shadow: 0px 0px 15px rgba(0,0,0,0.3); letter-spacing: 0.05em;">
             Greentech for Women
@@ -637,21 +622,20 @@
     style="font-family: 'Adorn Serif', serif; font-weight: 400; letter-spacing: 0.15em; text-shadow: 0 0 60px rgba(0, 0, 0, 0.35);">
   Greentech For Women
 </h1> -->
-<h1 class="text-6xl mb-6 uppercase tracking-widest"
-  style="
+          <h1 class="text-4xl sm:text-5xl md:text-6xl mb-6 uppercase tracking-wide sm:tracking-widest" style="
     font-family: 'Adorn Serif', serif;
     font-weight: 400;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.1em;
     text-shadow:
       0 0 3px rgba(255, 255, 255, 0.5),
       0 0 5px rgba(255, 255, 255, 0.3),
       0 0 7px rgba(255, 215, 0, 0.4);
     color: #fefcea;
   ">
-  Greentech For Women
-</h1>
-<!--aaaaaaaa-->
-<!-- <h1 class="text-4xl mb-6 "
+            Greentech For Women
+          </h1>
+          <!--aaaaaaaa-->
+          <!-- <h1 class="text-4xl mb-6 "
   style="
     font-family: 'Playfair Display', sans-serif;
     font-weight: 400;
@@ -675,13 +659,11 @@ Empowering Women, Nurturing Lives & Building a Greener Future!
 
         </div>
       </div>
-<div class="w-full h-full absolute sm:relative top-0" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));">
-  <img src="images/background-images/smaller6.png" 
-       class="object-cover w-full h-full" 
-       alt="hero banner"
-       loading="lazy" 
-       style="filter: brightness(1);">
-</div>
+      <div class="w-full h-full absolute sm:relative top-0"
+        style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));">
+        <img src="images/background-images/smaller6.png" class="object-cover w-full h-full" alt="hero banner"
+          loading="lazy" style="filter: brightness(1);">
+      </div>
 
     </div>
     <section class="relative px-4 pt-12 pb-12 text-center lg:pb-16 bg-light section-shadow mt-n7px">
@@ -787,7 +769,7 @@ Empowering Women, Nurturing Lives & Building a Greener Future!
             </a>
 
             <ul class="flex items-center justify-center gap-5 flex-wrap">
-              <li>
+              <!-- <li>
                 <a href="https://www.youtube.com/channel/" target="_blank"
                   class="block w-10 transition duration-300 ease-in-out transform translate-y-0 hover:-translate-y-4">
                   <img src="images/social-icon/youtube-icon.svg" class="block object-contain w-full h-auto"
@@ -800,29 +782,29 @@ Empowering Women, Nurturing Lives & Building a Greener Future!
                   <img src="images/social-icon/x-icon.svg" class="block object-contain w-full h-auto" alt="x icon">
                 </a>
               </li>
-              <li>
-                <a href="https://tiktok.com/" target="_blank"
+              <li> -->
+                <!-- <a href="https://tiktok.com/" target="_blank"
                   class="block w-10 transition duration-300 ease-in-out transform translate-y-0 hover:-translate-y-4">
                   <img src="images/social-icon/tiktok-icon.svg" class="block object-contain w-full h-auto"
                     alt="tiktok icon">
                 </a>
               </li>
-              <li>
-                <a href="https://www.linkedin.com/" target="_blank"
+              <li> -->
+                <!-- <a href="https://www.linkedin.com/" target="_blank"
                   class="block w-10 transition duration-300 ease-in-out transform translate-y-0 hover:-translate-y-4">
                   <img src="images/social-icon/linkedin-icon.svg" class="block object-contain w-full h-auto"
                     alt="linkedin icon">
                 </a>
               </li>
-              <li>
-                <a href="https://www.instagram.com/n/?hl=en" target="_blank"
+              <li> -->
+                <a href="https://www.instagram.com/greentechforwomen/?hl=en" target="_blank"
                   class="block w-10 transition duration-300 ease-in-out transform translate-y-0 hover:-translate-y-4">
                   <img src="images/social-icon/instagram-icon.svg" class="block object-contain w-full h-auto"
                     alt="instagram icon">
                 </a>
               </li>
               <li>
-                <a href="https://www.facebook.com/" target="_blank"
+                <a href="https://www.facebook.com/GreentechforWomen/"_blank"
                   class="block w-10 transition duration-300 ease-in-out transform translate-y-0 hover:-translate-y-4">
                   <img src="images/social-icon/facebook-icon.svg" class="block object-contain w-full h-auto"
                     alt="facebook icon">
@@ -914,7 +896,7 @@ Empowering Women, Nurturing Lives & Building a Greener Future!
   <script src="livewire/livewire.mind557.js?id=df3a17f2" data-csrf="gXlQVZmA5JyzkPowUFvrqJtw4Nyce6dxlH4AfRUn"
     data-update-uri="/livewire/update" data-navigate-once="true"></script>
 
-  <script src="http://cdn.jsdelivr.net/npm/sweetalert2@11" async></script>
+  <!-- <script src="http://cdn.jsdelivr.net/npm/sweetalert2@11" async></script> -->
 
   <script>
     /**** Livewire Alert Scripts ****/
