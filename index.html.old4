@@ -77,7 +77,6 @@
   <meta property="twitter:image" content="images/background-images/GFW_main.png" />
   <link href="https://fonts.googleapis.com/css2?family=Adorn+Serif&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet" />
 
   <link rel="canonical" href="index.html">
   <!-- Anton (for bold sans serif) -->
@@ -325,12 +324,9 @@
         </div>
       </div>
     </div>
-<div class="block lg:hidden px-4" style="background-color: #f3fcd5;">
-  <!-- mobile navbar content here -->
-</div>
 
     <div class="relative flex flex-col justify-center px-4 bg-primary text-light lg:bg-light  lg:text-primary"
-      x-data="{ navbarOpen: false }" @click.away="navbarOpen = false" style="background-color: #617a46;">
+      x-data="{ navbarOpen: false }" @click.away="navbarOpen = false">
       <div class="py-4 max-w-content w-full mx-auto flex items-center justify-between">
         <div class="flex items-center justify-center lg:hidden">
           <button type="button" aria-label="Toggle Menu" class="w-6 h-6" @click="navbarOpen = !navbarOpen">
@@ -624,7 +620,7 @@
     style="font-family: 'Adorn Serif', serif; font-weight: 400; letter-spacing: 0.15em; text-shadow: 0 0 60px rgba(0, 0, 0, 0.35);">
   Greentech For Women
 </h1> -->
-          <h1 class="pt-20 text-4xl sm:text-5xl md:text-6xl mb-6 uppercase tracking-wide sm:tracking-widest" style="
+          <h1 class="text-4xl sm:text-5xl md:text-6xl mb-6 uppercase tracking-wide sm:tracking-widest" style="
     font-family: 'Adorn Serif', serif;
     font-weight: 400;
     letter-spacing: 0.1em;
@@ -665,28 +661,10 @@
   ">
 Empowering Women, Nurturing Lives & Building a Greener Future!
 </h1> -->
-<div style="max-width: 600px; margin: 2rem auto; padding: 1rem; border: 1px solid #ccc;">
-  <h1 id="typewriter" 
-      style="font-family: Georgia, serif; font-style: italic; font-size: clamp(1.5rem,5vw,3rem); font-weight: 400; margin-bottom: 1.5rem; white-space: normal; overflow-wrap: break-word; text-align: left;">
-    <!-- typed text appears here -->
-  </h1>
-</div>
-
-<script>
-  const text = "Empowering Women, Nurturing Lives & Building a Greener Future!";
-  const element = document.getElementById('typewriter');
-  element.textContent = '';  // start empty
-
-  let i = 0;
-  function typeWriter() {
-    if (i < text.length) {
-      element.textContent += text.charAt(i);
-      i++;
-      setTimeout(typeWriter, 40);
-    }
-  }
-  typeWriter();
-</script>
+<h1 class="font-yeseva-one text-4xl font-semibold mb-6 items-left justify-left"
+    style="font-size:clamp(1.5rem,5vw,3rem);">
+  Empowering Women, Nurturing Lives & Building a Greener Future!
+</h1>
 
 
 
@@ -765,29 +743,29 @@ Empowering Women, Nurturing Lives & Building a Greener Future!
     </div>
   </section> -->
   <!-- About Us -->
-  <section class="pt-0 pb-20  bg-gradient-to-br from-yellow-50 to-yellow-100">
+  <section class="py-20 bg-gradient-to-br from-yellow-50 to-yellow-100 pt00">
     <div class="container mx-auto px-4 text-center max-w-4xl">
-      <h1 class="text-4xl lg:text-6xl font-bold text-green-800 mb-0 pt-6 pb-4">About Us</h1>
+      <h1 class="text-4xl lg:text-6xl font-bold text-green-800 mb-0 pt-6">About Greentech For Women</h1>
       <p class="text-xl text-green-700">
-        Greentech For Women (GFW) is a non-profit, non-political, and non-partisan organization
+        Greentech For Women (GFW) is a legally registered, non-profit, non-political, and non-partisan organization
         based in Nepal.
       </p>
       <blockquote class="mt-6 italic text-2xl font-semibold text-green-800">
         "Climate justice is not possible without gender justice."
       </blockquote>
       <div class="grid md:grid-cols-3 gap-8 mt-16">
-        <div style="background-color: #ffffff;" class="border border-green-300 p-6 rounded-xl">
+        <div class="bg-yellow-50 border border-green-300 p-6 rounded-xl">
           <i class="fa fa-3x m-3 fa-flag" style="color: rgb(243, 195, 63);" title aria-describedby="tooltip787478"></i>
           <h3 class="text-xl font-bold text-green-800 mb-2">Founded</h3>
           <p class="text-green-700">Established as a legally registered non-profit organization in Nepal</p>
         </div>
-        <div style="background-color: #ffffff;" class="border border-green-300 p-6 rounded-xl">
+        <div class="bg-yellow-50 border border-green-300 p-6 rounded-xl">
                     <i class="fa fa-3x m-3 fa-bullseye" style="color: rgb(243, 195, 63);" title aria-describedby="tooltip787478"></i>
           <h3 class="text-xl font-bold text-green-800 mb-2">Mission</h3>
           <p class="text-green-700">Advancing ecofeminist solutions at the intersection of gender and climate justice
           </p>
         </div>  
-        <div style="background-color: #ffffff;" class="border border-green-300 p-6 rounded-xl">
+        <div class="bg-yellow-50 border border-green-300 p-6 rounded-xl">
           <i class="fa fa-3x m-3 fa-users" style="color: rgb(243, 195, 63);" title aria-describedby="tooltip787478"></i>
           <h3 class="text-xl font-bold text-green-800 mb-2">Impact</h3>
           <p class="text-green-700">Representing grassroots voices on global platforms and policy forums</p>
@@ -801,7 +779,7 @@ Empowering Women, Nurturing Lives & Building a Greener Future!
   <img src="images/background-images/happy.png" style="max-width:80%; height:auto;" alt="Responsive centered image">
 </div> -->
 
-<picture  style="padding-top: 2rem;">
+<picture>
   <!-- Desktop image -->
   <source srcset="images/background-images/happy.png" media="(min-width: 769px)">
   
