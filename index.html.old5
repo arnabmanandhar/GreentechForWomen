@@ -342,7 +342,7 @@
         </div>
         <!-- logoooo -->
         <a href="index.html" class="hidden lg:block text-light lg:text-primary">
-          <img src="images/background-images/11111.png" width="100" height=100" alt="gov-logo-gold">
+          <img src="images/background-images/gfw_logo.png" width="100" height=100" alt="gov-logo-gold">
         </a>
         <a href="index.html" class="block lg:hidden text-light">
           <img src="images/background-images/11111.png" width="130" height="130" alt="gov-logo-gold">
@@ -358,18 +358,16 @@
           class="flex-grow w-full lg:w-max absolute lg:block lg:static top-[99%] left-0 right-0 h-auto border-t-2 border-t-primary bg-light p-10 transition-all duration-300 lg:pointer-events-auto lg:max-h-full lg:transform-none lg:overflow-visible lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 lg:transition-none pointer-events-auto">
           <ul
             class="flex flex-col gap-6 text-base leading-[18px] lg:flex-row lg:items-center lg:justify-end lg:text-lg">
-   <li class="lg:flex lg:items-center lg:justify-center">
-  <a href="About Us.html"
-    style="color: #ffffff;" class="uppercase transition-all duration-300 ease-in-out">
-    About Us
-  </a>
-</li>
+            <li class="lg:flex lg:items-center lg:justify-center">
+              <a href="About Us.html"
+                class="uppercase transition-all duration-300 ease-in-out text-primary-light lg:text-primary">
+                About Us</a>
+            </li>
             <li x-data="{ dropdownOpen: false }" class="relative" x-on:mouseover="dropdownOpen = true"
               x-on:mouseleave="dropdownOpen = false">
-                <div
-                   style="color: white;"
-  class="uppercase cursor-pointer transition-all duration-300 ease-in-out flex items-stretch justify-between gap-2.5 lg:justify-center lg:group-hover:text-light">
-  <span>Activities</span>
+              <div
+                class="uppercase cursor-pointer transition-all duration-300 ease-in-out text-primary-light lg:text-primary flex items-stretch justify-between gap-2.5 lg:justify-center lg:group-hover:text-light">
+                <span>Activities</span>
 
                 <div @click="dropdownOpen = !dropdownOpen" class="flex items-center w-max">
                   <svg class="block transition-all transform lg:group-hover:rotate-180"
@@ -406,7 +404,7 @@
               <div
                 class="uppercase transition-all duration-300 ease-in-out text-primary-light lg:text-primary flex items-stretch justify-between gap-2.5 lg:justify-center lg:group-hover:text-light">
 
-                <a href="vision.html" style="color: white;">
+                <a href="vision.html">
                   Our Vision
                 </a>
 
