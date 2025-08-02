@@ -12,9 +12,9 @@ app.get("/api/preview", async (req, res) => {
   const { url } = req.query;
   if (!url) return res.status(400).json({ error: "Missing URL parameter" });
 
-  try {
-    const response = await fetch(url);
-    const html = await response.text();
+  // try {
+  //   const response = await fetch(url);
+  //   const html = await response.text();
     const $ = cheerio.load(html);
 
     const getMeta = (prop) =>
